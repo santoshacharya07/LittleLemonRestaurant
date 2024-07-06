@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		41071D272C3953A900828C8E /* LittleLemonRestaurantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41071D262C3953A900828C8E /* LittleLemonRestaurantApp.swift */; };
-		41071D292C3953A900828C8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41071D282C3953A900828C8E /* ContentView.swift */; };
 		41071D2B2C3953AA00828C8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41071D2A2C3953AA00828C8E /* Assets.xcassets */; };
 		41071D2E2C3953AA00828C8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41071D2D2C3953AA00828C8E /* Preview Assets.xcassets */; };
+		41071D352C3953D200828C8E /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41071D342C3953D200828C8E /* OnBoardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		41071D232C3953A900828C8E /* LittleLemonRestaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleLemonRestaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41071D262C3953A900828C8E /* LittleLemonRestaurantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonRestaurantApp.swift; sourceTree = "<group>"; };
-		41071D282C3953A900828C8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		41071D2A2C3953AA00828C8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41071D2D2C3953AA00828C8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		41071D342C3953D200828C8E /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +52,9 @@
 			isa = PBXGroup;
 			children = (
 				41071D262C3953A900828C8E /* LittleLemonRestaurantApp.swift */,
-				41071D282C3953A900828C8E /* ContentView.swift */,
 				41071D2A2C3953AA00828C8E /* Assets.xcassets */,
 				41071D2C2C3953AA00828C8E /* Preview Content */,
+				41071D342C3953D200828C8E /* OnBoardingView.swift */,
 			);
 			path = LittleLemonRestaurant;
 			sourceTree = "<group>";
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41071D292C3953A900828C8E /* ContentView.swift in Sources */,
+				41071D352C3953D200828C8E /* OnBoardingView.swift in Sources */,
 				41071D272C3953A900828C8E /* LittleLemonRestaurantApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
