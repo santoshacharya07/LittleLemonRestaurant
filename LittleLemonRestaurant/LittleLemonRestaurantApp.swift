@@ -13,7 +13,7 @@ struct LittleLemonRestaurantApp: App {
 
     var body: some Scene {
         WindowGroup {
-           OnBoardingView()
+            OnBoardingView().environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

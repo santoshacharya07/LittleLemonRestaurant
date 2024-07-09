@@ -21,7 +21,7 @@ struct Header: View {
                         Spacer()
                         if isLoggedIn {
                             NavigationLink(destination: UserProfile()) {
-                                Image("profile-image-placeholder")
+                                Image("Profile")
                                     .resizable()
                                     .aspectRatio( contentMode: .fit)
                                     .frame(maxHeight: 50)
