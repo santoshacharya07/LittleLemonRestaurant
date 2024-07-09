@@ -11,8 +11,6 @@ import SwiftUI
 struct OnBoardingView: View {
     @StateObject private var viewModel = ViewModel()
     
-    let kIsLoggedIn = "kIsLoggedIn"
-    
     @State var firstName = ""
     @State var lastName = ""
     @State var email = ""
@@ -27,9 +25,13 @@ struct OnBoardingView: View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
-                
+                    Header()
+                    Hero()
+                        .padding()
+                        .background(Color.primaryColor1)
+                        .frame(maxWidth: .infinity, maxHeight: 240)
                     VStack {
-                        NavigationLink(destination: Home(), isActive: $isLoggedIn) { }
+//                        NavigationLink(destination: Home(), isActive: $isLoggedIn) { }
                         Text("First name *")
                             .onboardingTextStyle()
                         TextField("First Name", text: $firstName)
@@ -41,6 +43,8 @@ struct OnBoardingView: View {
                         TextField("E-mail", text: $email)
                             .keyboardType(.emailAddress)
                     }
+                    .navigationDestination(
+                        isPresented:$isLoggedIn) { Home() }
                     .textFieldStyle(.roundedBorder)
                     .disableAutocorrection(true)
                     .padding()
@@ -60,12 +64,17 @@ struct OnBoardingView: View {
                             UserDefaults.standard.set(lastName, forKey: kLastName)
                             UserDefaults.standard.set(email, forKey: kEmail)
                             UserDefaults.standard.set(true, forKey: kIsLoggedIn)
+                            UserDefaults.standard.set(true, forKey: kOrderStatuses)
+                            UserDefaults.standard.set(true, forKey: kPasswordChanges)
+                            UserDefaults.standard.set(true, forKey: kSpecialOffers)
+                            UserDefaults.standard.set(true, forKey: kNewsletter)
                             firstName = ""
                             lastName = ""
                             email = ""
                             isLoggedIn = true
                         }
                     }
+                    .buttonStyle(ButtonStyleYellowColorWide())
                     
                     Spacer()
                 }
@@ -97,14 +106,7 @@ struct OnBoardingView: View {
     }
     
 }
-extension Text {
-    func onboardingTextStyle() -> some View {
-        self
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .foregroundColor(Color.yellow)
-            .font(.custom("Karla-Bold", size: 13))
-    }
-}
+
 
 #Preview {
     OnBoardingView()
